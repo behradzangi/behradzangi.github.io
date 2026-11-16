@@ -1,28 +1,25 @@
-# Behrad Zangi | Final Portfolio V7
+# Behrad Zangi — Executive Personal Website (V9)
 
-A fast, framework-free website, tailored for GitHub Pages. Includes an accessible responsive homepage and a print-ready public résumé.
+A dark, editorial personal brand and résumé-forward portfolio with dedicated contact calls-to-action.
 
-## Contents
-- `index.html` — main portfolio
-- `resume.html` — concise public résumé; use its Print / Save PDF button
-- `styles.css`, `script.js` — responsive styling and interaction
-- `behrad-zangi-portrait.webp` — supplied photo (optimized)
-- `social-preview.jpg` — link-sharing preview image
-- `favicon.svg`, `sitemap.xml`, `robots.txt` — site metadata
+## Publishing on GitHub Pages
 
-## Deploy
-1. Unzip this package.
-2. Go to the GitHub repository `behradzangi/behradzangi.github.io`.
-3. Upload **all files directly into the publishing root**, replacing old site files (do not upload the containing folder).
-4. Commit to the branch configured in **Settings → Pages**; if publishing from branch, choose the root folder.
-5. Check `https://behradzangi.github.io/` and `https://behradzangi.github.io/resume.html` after deployment.
+1. Extract this ZIP. Do not upload the ZIP as-is.
+2. In your `behradzangi.github.io` repository on the `main` branch, choose **Add file → Upload files**.
+3. Drag all files **inside** the extracted folder into the upload area. `index.html` should be in the repository root.
+4. Commit your changes. Identically named files will be replaced. You do not have to delete old files first.
+5. Confirm **Settings → Pages → Deploy from a branch → main / (root)** if not already configured.
+6. Visit https://behradzangi.github.io and hard refresh if needed.
 
-No Node/npm/dependencies needed; Google Fonts are optional external resources and fallback fonts work offline.
+## Included
 
-## Privacy & editorial
-- No analytics, cookies, contact forms, or trackers are installed by this code.
-- Phone, private address, age, salary, marital status are deliberately omitted from public website and résumé.
-- Training courses are not represented as verified certificates.
-- The user-provided résumé is the basis for career details; verify employer English transliterations and dates before publishing.
-- The website does NOT automatically update its contents from LinkedIn.
-- Hosting changes are **not** applied automatically: publish through GitHub.
+- `index.html` — main executive portfolio
+- `styles.css` — typography and responsive layout
+- `script.js` — navigation, scroll features, reveal animation
+- `resume.html` — print-ready résumé (Print / Save PDF)
+- `behrad-zangi-portrait.webp` — portrait
+- `social-preview.jpg`, `favicon.svg`, `robots.txt`, `sitemap.xml`
+
+## Notes
+
+Content is based on the user-supplied résumé. The 1,500+ sales-permit achievement is from that résumé and is not independently verified. Personal address, salary and phone number have deliberately been excluded. Online fonts require an internet connection; system-font fallbacks are included. No analytics or cookie tracking.
