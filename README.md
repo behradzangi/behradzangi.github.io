@@ -1,25 +1,22 @@
-# Behrad Zangi — Executive Personal Website (V9)
+# Behrad Zangi — Atelier Edition V10
 
-A dark, editorial personal brand and résumé-forward portfolio with dedicated contact calls-to-action.
+An English luxury-dark personal branding and professional résumé website designed for static GitHub Pages hosting.
 
-## Publishing on GitHub Pages
+## Files
+- `index.html` — one-page portfolio
+- `resume.html` — dedicated printable English résumé
+- `styles.css`, `script.js` — layout and interaction
+- `portrait.webp`, `social-preview.jpg`, `favicon.svg` — visuals
+- `robots.txt`, `sitemap.xml` — basic SEO
 
-1. Extract this ZIP. Do not upload the ZIP as-is.
-2. In your `behradzangi.github.io` repository on the `main` branch, choose **Add file → Upload files**.
-3. Drag all files **inside** the extracted folder into the upload area. `index.html` should be in the repository root.
-4. Commit your changes. Identically named files will be replaced. You do not have to delete old files first.
-5. Confirm **Settings → Pages → Deploy from a branch → main / (root)** if not already configured.
-6. Visit https://behradzangi.github.io and hard refresh if needed.
+## Deploy to GitHub Pages
+1. Download and **extract** the ZIP.
+2. Go to the repository `behradzangi/behradzangi.github.io` and switch to the `main` branch.
+3. Upload **all extracted files**, not the ZIP and not a containing folder, to the repository root. Overwrite same-named files when prompted.
+4. Commit changes, and in Settings → Pages verify deployment from `main` / `(root)` (or the existing GitHub Actions Pages workflow).
+5. Confirm `https://behradzangi.github.io/` displays your photo and the heading “Bringing clarity to complex commerce.” If not, check the published branch and force refresh.
 
-## Included
+No backend, cookies, tracking, or build steps are needed. Google Fonts need internet; local fallback fonts are configured.
 
-- `index.html` — main executive portfolio
-- `styles.css` — typography and responsive layout
-- `script.js` — navigation, scroll features, reveal animation
-- `resume.html` — print-ready résumé (Print / Save PDF)
-- `behrad-zangi-portrait.webp` — portrait
-- `social-preview.jpg`, `favicon.svg`, `robots.txt`, `sitemap.xml`
-
-## Notes
-
-Content is based on the user-supplied résumé. The 1,500+ sales-permit achievement is from that résumé and is not independently verified. Personal address, salary and phone number have deliberately been excluded. Online fonts require an internet connection; system-font fallbacks are included. No analytics or cookie tracking.
+## Content notes
+Professional roles, dates, languages, training, education and the 1,500+ permit accomplishment are based on the supplied Persian résumé. Thesis title is based on the user-provided thesis title. Verify employer spellings and dates before public release. The résumé is *printable* through the browser’s Print → Save as PDF.
