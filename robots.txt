@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://behradzangi.github.io/sitemap.xml

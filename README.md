@@ -1,21 +1,28 @@
-# Behrad Zangi — Personal Website (v1)
+# Behrad Zangi | Final Portfolio V7
 
-A responsive, single-page English personal website with a luxury-minimal visual direction.
+A fast, framework-free website, tailored for GitHub Pages. Includes an accessible responsive homepage and a print-ready public résumé.
 
-## Preview locally
-Open `index.html` in a browser. Internet access is needed for the Google Fonts import; the site otherwise works without a build step.
+## Contents
+- `index.html` — main portfolio
+- `resume.html` — concise public résumé; use its Print / Save PDF button
+- `styles.css`, `script.js` — responsive styling and interaction
+- `behrad-zangi-portrait.webp` — supplied photo (optimized)
+- `social-preview.jpg` — link-sharing preview image
+- `favicon.svg`, `sitemap.xml`, `robots.txt` — site metadata
 
-## Before publishing, replace these placeholders
-- `YOUR_EMAIL@example.com` in `index.html`
-- `https://www.linkedin.com/in/YOUR-LINKEDIN/` in `index.html`
-- Add a professional portrait if desired.
-- Review the experience descriptions and confirm the public-facing job titles.
-- Add verified research, publications, project details and dates where appropriate.
+## Deploy
+1. Unzip this package.
+2. Go to the GitHub repository `behradzangi/behradzangi.github.io`.
+3. Upload **all files directly into the publishing root**, replacing old site files (do not upload the containing folder).
+4. Commit to the branch configured in **Settings → Pages**; if publishing from branch, choose the root folder.
+5. Check `https://behradzangi.github.io/` and `https://behradzangi.github.io/resume.html` after deployment.
 
-## Publish with GitHub Pages
-1. Create a public GitHub repository, e.g. `behradzangi.github.io` (or another repository name).
-2. Upload the contents of this folder to the repository root.
-3. In repository Settings → Pages, select Deploy from a branch, choose `main` and `/ (root)`.
-4. Connect a custom domain later if desired.
+No Node/npm/dependencies needed; Google Fonts are optional external resources and fallback fonts work offline.
 
-This is an initial content/design draft, not yet a verified public profile. No unconfirmed awards, metrics, publications or contact details have been invented.
+## Privacy & editorial
+- No analytics, cookies, contact forms, or trackers are installed by this code.
+- Phone, private address, age, salary, marital status are deliberately omitted from public website and résumé.
+- Training courses are not represented as verified certificates.
+- The user-provided résumé is the basis for career details; verify employer English transliterations and dates before publishing.
+- The website does NOT automatically update its contents from LinkedIn.
+- Hosting changes are **not** applied automatically: publish through GitHub.
