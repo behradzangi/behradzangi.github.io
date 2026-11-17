@@ -1,0 +1,11 @@
+(() => { 'use strict';
+const header=document.querySelector('.sub-header');if(!header)return;
+const nav=header.querySelector('.subpage-navigation');const btn=header.querySelector('.sub-menu-toggle');if(!nav||!btn)return;
+const close=()=>{nav.classList.remove('is-open');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label',document.documentElement.lang==='fa'?'بازکردن منو':'Open navigation');btn.textContent='☰';};
+btn.addEventListener('click',()=>{const open=!nav.classList.contains('is-open');if(open){nav.classList.add('is-open');btn.setAttribute('aria-expanded','true');btn.setAttribute('aria-label',document.documentElement.lang==='fa'?'بستن منو':'Close navigation');btn.textContent='×';}else close();});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+document.addEventListener('pointerdown',e=>{if(!header.contains(e.target))close()});
+window.addEventListener('resize',()=>{if(innerWidth>900)close()});
+document.addEventListener('portfolio:language',()=>{btn.setAttribute('aria-label',document.documentElement.lang==='fa'?'بازکردن منو':'Open navigation')});
+})();
