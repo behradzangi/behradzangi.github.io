@@ -1,39 +1,25 @@
-# Behrad Zangi — Orbital Portfolio V14
+# Behrad Zangi — Orbital Portfolio V22 (No external paid integrations)
 
-A refined update of V13. Keeps the moving particle background and orbital portrait, while positioning economic analysis and business advisory alongside verified international-trade employment history.
+Static website for GitHub Pages. Includes the interactive orbital portrait, 3D data animation, professional résumé, career timeline, case studies, skills, business advisory, articles, contact page, and the existing **daily reference FX dashboard**.
 
-## Deploy to GitHub Pages
-Upload the **contents** of this folder (not the ZIP itself) to the root of `behradzangi.github.io` on the publishing branch (`main` if Pages is configured for it). Commit all changes.
+## Deferred / intentionally removed
+- Cal.com scheduling integration and booking page
+- OpenAI API powered assistant and page
+- Twelve Data optional market quotes integration
+- Cloudflare Workers backend and secret/API configuration
 
-## Important content note
-“Economic analysis” and “business advisory” are featured as professional focus and service interests. The dated employment timeline retains only job titles documented in the supplied résumé; no additional analyst employment or consulting results have been invented. Review all public descriptions before publication.
+These features are NOT required to publish the site. When accounts are connected later, they can be reintroduced safely.
 
-## Files
-- `index.html` main site
-- `resume.html` print-friendly résumé
-- `styles.css` / `script.js` styles and animation
-- `portrait.webp` personal photo
-- `social-preview.jpg`, `favicon.svg`, `sitemap.xml`, `robots.txt` social/SEO assets
+## Publish to GitHub Pages
+1. Extract the ZIP and upload its **contents** into the repository root of `behradzangi.github.io`.
+2. Files such as `index.html`, `styles.css` and `script.js` must be at the root.
+3. **Important:** GitHub uploading new files does not delete old files. If the previous V21 was published, delete the old `booking.html`, `assistant.html`, `config.js`, `connected.js`, `connected.css`, and `backend/` folder from the repository too; otherwise those old pages will remain reachable.
+4. Commit changes and check the site in a private browser tab.
 
+## Market dashboard
+`intelligence.html` retains the V20 existing public Frankfurter daily **reference** exchange-rate feature (requires network access in visitor's browser). It is not real-time pricing. No secret/API key needed. Other commodity resources are outbound links only.
 
-## V15 content update
-The LinkedIn About description supplied by the owner was used to refine the introduction, add research/professional interests, and adjust the résumé and contact invitation. The orbital design and portrait are retained. Upload the extracted site files to the root of the GitHub Pages repository.
+## Contact
+Contact form prepares a draft in the visitor's email application; it does not store or send messages automatically. Email and LinkedIn links are active.
 
-
-## V16 — Economic Insights & Publications
-
-- Added a curated Insights section to `index.html` without changing the orbital hero or resume layout.
-- A featured perspective on automotive tariffs is based on a publicly indexed LinkedIn post by Behrad Zangi; the linked destination is the LinkedIn activity feed rather than an unverified individual post URL.
-- The three lower cards are explicitly **topics of interest**, not claimed published papers or articles.
-- To feature individual posts, replace the LinkedIn activity-feed URL with a verified direct post URL after checking the post is public.
-- All files go into the root of `behradzangi.github.io` (not a nested folder). Upload/commit to publish.
-
-
-## V17 motion update
-Added: orbit satellites, radar sweep, hover-reactive portrait, subtle cursor parallax on desktop, scroll reveals with staggering, animated career statistic, career timeline progression, interactive cards, signal chart trace, navigation position marker and scroll progress. Respects prefers-reduced-motion and pauses background network animation when tab/hero is not visible. No external animation libraries.
-
-
-## V18 — Interactive 3D Data Network
-Replaced the old flat particle field with a **perspective-projected 3D point cloud** and sparse linked graph. The network gently rotates, creates depth/parallax in response to mouse position, and highlights nodes near the cursor. This uses built-in Canvas 2D (no WebGL dependencies, no external CDN). Desktop uses more nodes than mobile; the animation pauses offscreen and when hidden and honors `prefers-reduced-motion`. V17 layout, portrait/orbits, professional content, and links are retained.
-
-Deployment: Upload all extracted files into the repository ROOT and commit. `index.html`, `script.js`, and `styles.css` must all be replaced together. On mobile, open the site in a fresh private tab to bypass stale cached files.
+Accessibility: reduced-motion setting supported. Review in desktop and mobile browsers before public launch.
