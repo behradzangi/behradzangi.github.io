@@ -1,22 +1,29 @@
-# Behrad Zangi — Orbital Portfolio V13
+# Behrad Zangi — Orbital Portfolio V14
 
-A new, dark, data-inspired professional portfolio for GitHub Pages. Its signature is an **animated network background**, a **circular portrait with orbiting motion and floating specialties**, and a **clean experience-first résumé layout**.
+A refined update of V13. Keeps the moving particle background and orbital portrait, while positioning economic analysis and business advisory alongside verified international-trade employment history.
 
-## Deployment
+## Deploy to GitHub Pages
+Upload the **contents** of this folder (not the ZIP itself) to the root of `behradzangi.github.io` on the publishing branch (`main` if Pages is configured for it). Commit all changes.
 
-1. Extract the ZIP file.
-2. Upload **the contents**, not the outer folder or ZIP, to the root of the `behradzangi.github.io` repository on the `main` branch.
-3. Ensure GitHub Pages is configured to deploy from `main` / root (Settings → Pages).
-4. Commit changes; reload the published website with a hard refresh.
+## Important content note
+“Economic analysis” and “business advisory” are featured as professional focus and service interests. The dated employment timeline retains only job titles documented in the supplied résumé; no additional analyst employment or consulting results have been invented. Review all public descriptions before publication.
 
-`index.html` must be at repository root. Uploading identical filenames overwrites existing files. You do not need to delete the website first.
+## Files
+- `index.html` main site
+- `resume.html` print-friendly résumé
+- `styles.css` / `script.js` styles and animation
+- `portrait.webp` personal photo
+- `social-preview.jpg`, `favicon.svg`, `sitemap.xml`, `robots.txt` social/SEO assets
 
-## Edit this site
 
-- Personal information, role titles and links: `index.html`.
-- Visual appearance, orbital layout and responsive behavior: `styles.css`.
-- Animated network background, typed roles and mobile menu: `script.js`.
-- Personal photo: `portrait.webp`.
-- Printable full CV: `resume.html`.
+## V15 content update
+The LinkedIn About description supplied by the owner was used to refine the introduction, add research/professional interests, and adjust the résumé and contact invitation. The orbital design and portrait are retained. Upload the extracted site files to the root of the GitHub Pages repository.
 
-No build process or external JavaScript dependencies are required. Google Fonts is optional; system fallbacks are supplied. Animated background respects reduced-motion preferences. This website is a new design inspired by the *concept* of data visualization and animated specialties, not a copy of any reference implementation.
+
+## V16 — Economic Insights & Publications
+
+- Added a curated Insights section to `index.html` without changing the orbital hero or resume layout.
+- A featured perspective on automotive tariffs is based on a publicly indexed LinkedIn post by Behrad Zangi; the linked destination is the LinkedIn activity feed rather than an unverified individual post URL.
+- The three lower cards are explicitly **topics of interest**, not claimed published papers or articles.
+- To feature individual posts, replace the LinkedIn activity-feed URL with a verified direct post URL after checking the post is public.
+- All files go into the root of `behradzangi.github.io` (not a nested folder). Upload/commit to publish.
