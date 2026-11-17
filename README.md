@@ -1,24 +1,20 @@
-# Behrad Zangi — Studio Portfolio V11
+# Behrad Zangi — Minimal Portfolio V12
 
-A rebuilt, responsive executive résumé and personal-brand website for GitHub Pages.
+An intentionally restrained, dark editorial personal website inspired by the clean information hierarchy of Parham Pishro's portfolio, but with original styling and copy.
 
-## Design
-- New visual system: graphite / indigo / soft lilac (no green, gold or large white panels).
-- New typography: Space Grotesk + DM Sans.
-- New layout: slim identity rail, editorial hero, portrait, résumé-focused chronology, professional impact, and direct contact actions.
-- Dedicated printer-friendly résumé in `resume.html`.
-- Zero framework/build process required.
+## Deploy on GitHub Pages
 
-## Deploy
-1. Extract this ZIP.
-2. Upload the **contents** of the extracted folder (not the folder or ZIP itself) to the root of the `behradzangi.github.io` repository on the published branch (typically `main`).
-3. Commit the changes and wait for GitHub Pages to finish deployment.
-4. Open `https://behradzangi.github.io/?v=11` to avoid using an older cached page.
+Upload the **contents** of this ZIP (not the ZIP itself) to the root of the `behradzangi.github.io` repository, on the branch configured for GitHub Pages. Replace same-named files and commit. `index.html` must stay at the repository root.
 
-Required files: `index.html`, `resume.html`, `styles.css`, `script.js`, `portrait.webp`, `social-preview.jpg`, `favicon.svg`, `robots.txt`, `sitemap.xml`.
+## Pages
+- `index.html`: portfolio and contact
+- `resume.html`: detailed CV with a browser Print / Save as PDF control
+- `portrait.webp`: supplied personal image
+- `styles.css`: all responsive styles
+- `script.js`: mobile navigation and dynamic copyright year
 
 ## Notes
-- All professional details are based on the supplied résumé and previously confirmed thesis topic. Review for accuracy before publication.
-- The portrait is taken from the supplied photograph.
-- The public website intentionally excludes personal phone number, salary, street address and marital status.
-- The résumé PDF control opens your browser's print dialog; choose Save as PDF.
+- The design intentionally has only four main menu links and five sections.
+- Contact is an actual `mailto:` link, not a pretend submission form.
+- No personal phone number, salary or residential address are displayed.
+- The professional details were taken from the supplied résumé and previously confirmed research focus. Review the English wording before publishing.
