@@ -1,0 +1,13 @@
+(()=>{'use strict';const $=s=>document.querySelector(s);if(!$('#preview-chart'))return;const line=$('#mc-line'),area=$('#mc-area'),dot=$('#mc-dot');const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;let raf=0, visible=true,points=[];
+function draw(t){const path='M'+points.map((p,i)=>`${(i*640/(points.length-1)).toFixed(1)},${p.toFixed(1)}`).join(' L');line.setAttribute('d',path);area.setAttribute('d',path+' L640,230 L0,230 Z');dot.setAttribute('cx',640);dot.setAttribute('cy',points.at(-1));}
+let base=Array.from({length:32},(_,i)=>165-i*2+Math.sin(i*.7)*18+Math.cos(i*.34)*14);
+function animate(t){if(!visible)return;points=base.map((y,i)=>y+Math.sin(t/1100+i*.4)*4);draw(t);if(!reduce)raf=requestAnimationFrame(animate)};
+const observer=new IntersectionObserver(e=>{visible=e[0].isIntersecting;if(visible){cancelAnimationFrame(raf);animate(performance.now())}else cancelAnimationFrame(raf)});observer.observe($('#preview-chart'));if(reduce){points=base;draw(0)}
+const cache=()=>{try{return JSON.parse(localStorage.getItem('bz-fx-latest-v23'))}catch{return null}};
+function setRate(data,offline=false){if(!data?.rates?.USD)return;$('#preview-eurusd').textContent=Number(data.rates.USD).toFixed(4);$('#preview-eurgbp').textContent=Number(data.rates.GBP).toFixed(4);$('#preview-date').textContent=`${offline?'Saved':'Published'} rates · ${data.date} · illustrative chart`}
+const c=cache();if(c)setRate(c,true);
+fetch('https://api.frankfurter.dev/v1/'+new Date(Date.now()-70*86400000).toISOString().slice(0,10)+'..?base=EUR&symbols=USD').then(r=>{if(!r.ok)throw Error();return r.json()}).then(d=>{const vals=Object.entries(d.rates||{}).filter(([dt,v])=>Number.isFinite(v?.USD)).sort((a,b)=>a[0].localeCompare(b[0])).slice(-32).map(x=>x[1].USD);if(vals.length<5)return;const mn=Math.min(...vals),mx=Math.max(...vals),span=Math.max(.001,mx-mn);base=vals.map(v=>170-(v-mn)/span*105);$('#preview-chart').setAttribute('aria-label','Historical EUR/USD reference rates, last available observations');$('#preview-date').textContent=$('#preview-date').textContent.replace('illustrative chart','historical chart');}).catch(()=>{});
+
+const controller=new AbortController();setTimeout(()=>controller.abort(),9000);
+fetch('https://api.frankfurter.dev/v1/latest?base=EUR&symbols=USD,GBP,CHF',{signal:controller.signal}).then(r=>{if(!r.ok)throw Error();return r.json()}).then(d=>{if(d?.rates?.USD&&d?.rates?.GBP){setRate(d);try{localStorage.setItem('bz-fx-latest-v23',JSON.stringify({date:d.date,rates:{EUR:1,...d.rates}}))}catch{}}}).catch(()=>{$('#preview-date').textContent=c?'Saved rates · provider offline':'Reference feed unavailable · open dashboard to retry'});
+})();

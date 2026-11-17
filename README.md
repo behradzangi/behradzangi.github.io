@@ -1,25 +1,19 @@
-# Behrad Zangi — Orbital Portfolio V22 (No external paid integrations)
+# Behrad Zangi — Economic Intelligence V23
 
-Static website for GitHub Pages. Includes the interactive orbital portrait, 3D data animation, professional résumé, career timeline, case studies, skills, business advisory, articles, contact page, and the existing **daily reference FX dashboard**.
+Static GitHub Pages portfolio with an upgraded economic intelligence workspace.
 
-## Deferred / intentionally removed
-- Cal.com scheduling integration and booking page
-- OpenAI API powered assistant and page
-- Twelve Data optional market quotes integration
-- Cloudflare Workers backend and secret/API configuration
+## What is fixed
+- Critical selector bug in the old rate loader (missing `#` for ID lookup) corrected by replacing it with a validated, resilient client.
+- Historical chart, seven-day to six-month ranges, currency calculator, CSV export, source attribution and retry flow.
+- A blank market preview on the home page is replaced by an animated economic terminal.
+- Public Frankfurter daily reference rates; no account, API key, or backend required. Not real-time market prices.
+- Failed requests never invent values. Previously fetched rates may appear marked **Saved** or **Cached**.
 
-These features are NOT required to publish the site. When accounts are connected later, they can be reintroduced safely.
+## Publish
+Extract the ZIP and upload **all files inside**, not the ZIP, to the root of `behradzangi.github.io` on branch `main`. Commit and check GitHub Actions → Pages. Hard-refresh after deployment.
 
-## Publish to GitHub Pages
-1. Extract the ZIP and upload its **contents** into the repository root of `behradzangi.github.io`.
-2. Files such as `index.html`, `styles.css` and `script.js` must be at the root.
-3. **Important:** GitHub uploading new files does not delete old files. If the previous V21 was published, delete the old `booking.html`, `assistant.html`, `config.js`, `connected.js`, `connected.css`, and `backend/` folder from the repository too; otherwise those old pages will remain reachable.
-4. Commit changes and check the site in a private browser tab.
+## Troubleshooting
+Open `intelligence.html`, click Refresh. If the provider is blocked by a browser extension or offline, the website shows a clear error; open `https://frankfurter.dev/` to verify provider access. For browser diagnostics open Developer Tools → Console / Network and inspect `api.frankfurter.dev`. Avoid opening `file://` locally for API validation: use a local server such as `python -m http.server 8080`.
 
-## Market dashboard
-`intelligence.html` retains the V20 existing public Frankfurter daily **reference** exchange-rate feature (requires network access in visitor's browser). It is not real-time pricing. No secret/API key needed. Other commodity resources are outbound links only.
-
-## Contact
-Contact form prepares a draft in the visitor's email application; it does not store or send messages automatically. Email and LinkedIn links are active.
-
-Accessibility: reduced-motion setting supported. Review in desktop and mobile browsers before public launch.
+## Validation
+Browser and JavaScript checks performed locally; actual production GitHub Pages deployment is not made by this package.
