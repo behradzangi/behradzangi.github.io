@@ -27,3 +27,13 @@ The LinkedIn About description supplied by the owner was used to refine the intr
 - The three lower cards are explicitly **topics of interest**, not claimed published papers or articles.
 - To feature individual posts, replace the LinkedIn activity-feed URL with a verified direct post URL after checking the post is public.
 - All files go into the root of `behradzangi.github.io` (not a nested folder). Upload/commit to publish.
+
+
+## V17 motion update
+Added: orbit satellites, radar sweep, hover-reactive portrait, subtle cursor parallax on desktop, scroll reveals with staggering, animated career statistic, career timeline progression, interactive cards, signal chart trace, navigation position marker and scroll progress. Respects prefers-reduced-motion and pauses background network animation when tab/hero is not visible. No external animation libraries.
+
+
+## V18 — Interactive 3D Data Network
+Replaced the old flat particle field with a **perspective-projected 3D point cloud** and sparse linked graph. The network gently rotates, creates depth/parallax in response to mouse position, and highlights nodes near the cursor. This uses built-in Canvas 2D (no WebGL dependencies, no external CDN). Desktop uses more nodes than mobile; the animation pauses offscreen and when hidden and honors `prefers-reduced-motion`. V17 layout, portrait/orbits, professional content, and links are retained.
+
+Deployment: Upload all extracted files into the repository ROOT and commit. `index.html`, `script.js`, and `styles.css` must all be replaced together. On mobile, open the site in a fresh private tab to bypass stale cached files.
