@@ -17,3 +17,7 @@ Open `intelligence.html`, click Refresh. If the provider is blocked by a browser
 
 ## Validation
 Browser and JavaScript checks performed locally; actual production GitHub Pages deployment is not made by this package.
+
+
+## Persian and English language switch (V24)
+A language toggle is provided on each page. It persists the selection in localStorage and changes page direction (RTL Persian / LTR English). This is client-side localization and does not require a service or key. English is the default. For SEO indexing of both languages separately, static locale URLs with hreflang can be developed later. The original market rates remain real reference feed values, not translated or substituted.

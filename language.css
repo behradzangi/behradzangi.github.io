@@ -1,0 +1,23 @@
+
+/* Bilingual Persian / English language switch */
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
+.language-toggle{display:inline-flex;align-items:center;gap:.45rem;justify-content:center;min-width:68px;padding:.56rem .74rem;background:rgba(16,36,61,.76);color:#d9f4ff;border:1px solid rgba(132,214,250,.48);border-radius:999px;font:700 .78rem/1 'DM Sans',sans-serif;letter-spacing:.06em;cursor:pointer;transition:background .2s,box-shadow .2s,transform .2s;white-space:nowrap;flex-shrink:0;z-index:20}
+.language-toggle:hover,.language-toggle:focus-visible{background:rgba(60,118,148,.44);box-shadow:0 0 0 3px rgba(86,182,241,.17);transform:translateY(-1px)}
+.language-toggle .lang-icon{font-size:1rem;color:#77d6ff}
+.site-header>.language-toggle,.sub-header>.language-toggle{margin-inline-start:auto}
+.resume-head>.language-toggle{margin-inline-start:1rem}
+html[dir=rtl] body{font-family:'Vazirmatn',Tahoma,sans-serif;text-align:right}
+html[dir=rtl] :is(h1,h2,h3,h4,p,li,button,nav,a,span,small,label,input,textarea,select){font-family:inherit}
+html[dir=rtl] :is(.wordmark,.mark,.mark-dot,.fx-chart-kpis strong,.data-card strong,.fx-result strong,.chart-axis,.fx-convert-fields select){font-family:'DM Sans',sans-serif}
+html[dir=rtl] :is(.hero-name,.hero h1,h1,h2,h3){letter-spacing:normal;line-height:1.55}
+html[dir=rtl] :is(.nav,.site-nav,.sub-header nav){direction:rtl}
+html[dir=rtl] .hero-orbit,html[dir=rtl] .orbital-scene,html[dir=rtl] .hero-visual,html[dir=rtl] .geo-lines{direction:ltr}
+html[dir=rtl] :is(.data-card strong,.chart-panel svg,.fx-chart-kpis strong,.fx-result strong,#fx-converted,#fx-chart,.fx-convert-fields input){direction:ltr;text-align:left}
+html[dir=rtl] input[type=email]{direction:ltr;text-align:left}
+html[dir=rtl] .data-card-grid{direction:ltr}html[dir=rtl] .data-card{direction:rtl}
+html[dir=rtl] .chart-range{direction:ltr}
+html[dir=rtl] .language-toggle{direction:ltr;font-family:'DM Sans',sans-serif}
+html[dir=rtl] .section-no,html[dir=rtl] .section-kicker{letter-spacing:normal}
+html[dir=rtl] .sub-header,html[dir=rtl] .site-header{gap:12px}
+@media(max-width:850px){.language-toggle{min-width:53px;padding:.5rem .6rem}.sub-header>.language-toggle{margin-inline-start:0}}
+@media print{.language-toggle{display:none!important}}
