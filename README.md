@@ -1,23 +1,18 @@
-# Behrad Zangi — Economic Intelligence V23
+# Behrad Zangi — Orbital Bilingual V25
 
-Static GitHub Pages portfolio with an upgraded economic intelligence workspace.
+Responsive GitHub Pages static portfolio (English / فارسی).
 
-## What is fixed
-- Critical selector bug in the old rate loader (missing `#` for ID lookup) corrected by replacing it with a validated, resilient client.
-- Historical chart, seven-day to six-month ranges, currency calculator, CSV export, source attribution and retry flow.
-- A blank market preview on the home page is replaced by an animated economic terminal.
-- Public Frankfurter daily reference rates; no account, API key, or backend required. Not real-time market prices.
-- Failed requests never invent values. Previously fetched rates may appear marked **Saved** or **Cached**.
+## What's new
+- Rebuilt desktop header layout: dedicated action group for contact, language and mobile menu; no overlap at laptop widths.
+- Fixed navigation breakpoints and RTL navigation handling.
+- Added progressive entrance motion, reactive ambient light, refined hover motion, reduced-motion handling and a motion control in the footer.
+- Continued V24 bilingual translations, resume, and Economic Intelligence tools.
+- Uses client-side language preference saved in localStorage; no server or account required.
 
-## Publish
-Extract the ZIP and upload **all files inside**, not the ZIP, to the root of `behradzangi.github.io` on branch `main`. Commit and check GitHub Actions → Pages. Hard-refresh after deployment.
+## Deployment
+Unzip and upload **the contents** (including portrait.webp, all HTML/CSS/JS files) to the root of the GitHub Pages repository. If older unused pages remain in the repository, delete them separately if needed.
 
-## Troubleshooting
-Open `intelligence.html`, click Refresh. If the provider is blocked by a browser extension or offline, the website shows a clear error; open `https://frankfurter.dev/` to verify provider access. For browser diagnostics open Developer Tools → Console / Network and inspect `api.frankfurter.dev`. Avoid opening `file://` locally for API validation: use a local server such as `python -m http.server 8080`.
-
-## Validation
-Browser and JavaScript checks performed locally; actual production GitHub Pages deployment is not made by this package.
-
-
-## Persian and English language switch (V24)
-A language toggle is provided on each page. It persists the selection in localStorage and changes page direction (RTL Persian / LTR English). This is client-side localization and does not require a service or key. English is the default. For SEO indexing of both languages separately, static locale URLs with hreflang can be developed later. The original market rates remain real reference feed values, not translated or substituted.
+## Notes
+Daily FX data requires browser internet and access to Frankfurter's public service; no API key. This is not real-time trade pricing.
+Reduced-motion user preference is respected. Motion toggle appears in the page footer.
+Test the website at its deployed URL after publishing; this package does not publish on your behalf.

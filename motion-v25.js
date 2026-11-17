@@ -1,0 +1,18 @@
+(()=>{'use strict';
+const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
+const state={running:!reduced.matches,raf:0,x:innerWidth/2,y:innerHeight/2};
+const doc=document.documentElement;
+let revealObserver;
+function ready(){
+ const nav=document.querySelector('.site-header .nav');const btn=document.querySelector('.site-header .menu-toggle');
+ // Existing menu behavior from script.js is preserved. Only reinforce class & aria on resize.
+ if(nav&&btn){btn.addEventListener('click',()=>{requestAnimationFrame(()=>{const opened=nav.classList.contains('open')||nav.classList.contains('active')||nav.classList.contains('is-open')||btn.getAttribute('aria-expanded')==='true'; if(opened)nav.classList.add('is-open');else nav.classList.remove('is-open')})});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('is-open')));addEventListener('resize',()=>{if(innerWidth>1160){nav.classList.remove('is-open')}})}
+ const targets=[...document.querySelectorAll('.section h2,.section-title-row,.section-head,.case-card,.impact-item,.impact-band,.data-card,.fx-workbench,.chart-panel,.insight-topic,.resource-grid>a,.world-panel,.page-hero,.contact-option,.career-item')].filter(el=>!el.closest('.hero'));
+ if('IntersectionObserver'in window&&!reduced.matches){doc.classList.add('v25-motion');targets.forEach((el,i)=>{el.classList.add('v25-reveal');el.style.setProperty('--reveal-delay',(i%3)*65+'ms')});revealObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('v25-in');revealObserver.unobserve(e.target)}}),{threshold:.08,rootMargin:'0px 0px 50px 0px'});targets.forEach(x=>revealObserver.observe(x))}
+ // Restrict reactive spotlight to fine pointers and a single rAF update.
+ if(matchMedia('(pointer:fine)').matches&&!reduced.matches){let timer=0;addEventListener('pointermove',e=>{state.x=e.clientX;state.y=e.clientY;if(!state.raf)state.raf=requestAnimationFrame(()=>{doc.style.setProperty('--glow-x',state.x+'px');doc.style.setProperty('--glow-y',state.y+'px');state.raf=0})},{passive:true});addEventListener('pointerleave',()=>doc.style.setProperty('--glow-alpha','0'));addEventListener('pointerenter',()=>doc.style.setProperty('--glow-alpha','.55'))}
+ // Optional animation preference: an unobtrusive accessible toggle near footer (not another header control).
+ const footer=document.querySelector('footer');if(footer){const b=document.createElement('button');b.type='button';b.id='motion-toggle-v25';b.setAttribute('aria-pressed','false');b.style.cssText='background:transparent;color:#9bbad2;border:1px solid #34506c;border-radius:9px;padding:9px 12px;font:500 12px inherit;cursor:pointer;margin:10px';const enabled=()=>{try{return localStorage.getItem('behrad-motion-disabled')!=='1'}catch{return true}};function update(){const on=enabled();doc.classList.toggle('motion-paused',!on);b.setAttribute('aria-pressed',String(!on));const fa=document.documentElement.lang==='fa';b.textContent=on?(fa?'⏸ کاهش حرکت':'⏸ Reduce motion'):(fa?'▶ فعال‌سازی حرکت':'▶ Enable motion');if(!on)targets.forEach(x=>x.classList.add('v25-in'))}b.addEventListener('click',()=>{try{localStorage.setItem('behrad-motion-disabled',enabled()?'1':'0')}catch{}update()});footer.appendChild(b);document.addEventListener('portfolio:language',update);update()}
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',ready);else ready();
+})();

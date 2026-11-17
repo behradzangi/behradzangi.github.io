@@ -28,7 +28,7 @@ function setLang(next){lang=next;try{localStorage.setItem(key,lang)}catch{}
  document.dispatchEvent(new CustomEvent('portfolio:language',{detail:{lang}}));
 }
 function init(){
- const host=document.querySelector('.site-header .header-actions,.site-header,.sub-header,.resume-head,header')||document.body;
+ const host=document.querySelector('.site-header .header-actions,.sub-header .header-actions,.resume-head .header-actions,.site-header,.sub-header,.resume-head,header')||document.body;
  const button=document.createElement('button');button.className='language-toggle';button.type='button';button.setAttribute('aria-label','Switch language');host.appendChild(button);button.addEventListener('click',()=>setLang(lang==='en'?'fa':'en'));
  setLang(lang);
  // Translate changes introduced asynchronously by FX API, typing effects, and dialog controls.
